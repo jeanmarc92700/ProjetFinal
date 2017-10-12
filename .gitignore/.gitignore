@@ -16,8 +16,9 @@ gen/
 .gradle/
 build/
 
-# ignore META-INF
-*/META-INF/*
+# ignore .MF et .properties
+*.MF
+*.properties
 
 # Local configuration file (sdk path, etc)
 local.properties
