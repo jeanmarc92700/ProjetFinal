@@ -16,9 +16,9 @@ gen/
 .gradle/
 build/
 
-# ignore .MF et .properties
-*.MF
-*.properties
+# ignore
+MANIFEST.MF
+pom.properties
 
 # Local configuration file (sdk path, etc)
 local.properties
