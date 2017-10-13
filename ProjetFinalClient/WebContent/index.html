@@ -6,10 +6,34 @@
 <link rel="styleSheet" type="text/css" href="./css/bootstrap.min.css" />
 <link rel="styleSheet" type="text/css" href="./css/style.css" />
 </head>
-<body>
+<body ng-app="myApp">
 
 
+	<div ng-switch="varConnecte">
+		<div ng-switch-when="connecte">
+			<div ng-include=" 'view/barregestioncompte.html' "></div>
+		</div>
+		<div ng-switch-default>
+			<div ng-include=" 'view/barreconnexion.html' "></div>
+		</div>
+	</div>
 
+
+	<div ng-switch="typeUtilisateur">
+		<div ng-switch-when="admin">
+			<div ng-include=" 'view/navigationadmin.html' "></div>
+		</div>
+		<div ng-switch-when="adherent">
+			<div ng-include=" 'view/navigationadherent.html' "></div>
+		</div>
+		<div ng-switch-default>
+			<div ng-include=""></div>
+		</div>
+	</div>
+
+	<div ng-view></div>
+	
+	
 	<script type="text/javascript" src="./angular/angular.min.js"></script>
 	<script type="text/javascript" src="./angular/angular-route.js"></script>
 	<script type="text/javascript" src="./js/app.js"></script>
